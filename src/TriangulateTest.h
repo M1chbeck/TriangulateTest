@@ -19,8 +19,7 @@ class TriangulateTest : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    void addPoint( float x, float y, float z );
-    void addStaticPoint( float x, float y, float z );
+        void addPoint(vector<XYZ> *where, float x, float y, float z );
     private:
         float m_framerateMult;
     
@@ -29,6 +28,6 @@ class TriangulateTest : public ofBaseApp{
         vector<ITRIANGLE> m_triangles;
         ofMesh m_triangleMesh;
     
-        float m_circleXPos;
-        float m_circleYPos;
+        float m_mouseXPos;
+        float m_mouseYPos;
 };
